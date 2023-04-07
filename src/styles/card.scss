@@ -1,0 +1,41 @@
+.card-item {
+  flex: 0 0 25%;
+  font-family: "RobottoRegular", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: left;
+}
+.author{
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 1rem;
+}
+.oval{
+  width: 0.4rem;
+  height: 0.5rem;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.red-title {
+  font-size: 0.9rem;
+  color: #eb0028;
+  font-style: normal;
+  font-weight: bolder;
+  font-family: "Roboto-Bold";
+}
+.date{
+  color: #9B9B9B;
+  font-size: 0.75rem;
+  font-family: "RobottoRegular";
+}
+.big-header {
+  font-size: 1.5rem;
+  font-family: "Roboto-Bold";
+  color: black;
+  text-align: left;
+  line-height: 1.875rem; 
+}
+.main-paragraph {
+  color: #929292;
+  text-align: left;
+}
