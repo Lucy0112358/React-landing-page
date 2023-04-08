@@ -1,19 +1,54 @@
-import React from 'react';
-import Logotype from '../assets/Logotype.png'
+import React from "react";
+import Logotype from "../assets/Logotype.png";
+import Path from "../assets/Path.png";
 
 function Navbar() {
-    return (
-        <div>
-            <img className='logotype' src={Logotype} />
-            <div>Demos</div>
-            <div>Post</div>
-            <div>Features</div>
-            <div>Categories</div>
-            <div>Shop</div>
-            <div>Buy Now</div>
-        </div>
-      
-    )
+  window.addEventListener("scroll", () => {
+    const scrolled = window.scrollY;
+    if (scrolled > 200) {
+      let element = document.getElementById("menu");
+      element.style.transform = "translateY(-100%)";
+    } else if (scrolled <= 200) {
+      let element = document.getElementById("menu");
+      element.style.transform = "translateY(0)";
+    }
+  });
+
+  return (
+    <>
+      <div>       
+        <nav id="menu">
+          <img src={Logotype} />
+          <div className="container">
+          <div>
+            Demos
+            <img src={Path} />
+          </div>
+          <div>
+          Post
+            <img src={Path} />
+          </div>{" "}
+          <div>
+          Features
+            <img src={Path} />
+          </div>{" "}
+          <div>
+          Categories
+            <img src={Path} />
+          </div>{" "}
+          <div>
+          Shop
+            <img src={Path} />
+          </div>{" "}
+          <div>
+            Demos
+           
+          </div>
+          </div>
+        </nav>
+      </div>
+    </>
+  );
 }
 
-export default Navbar
+export default Navbar;
