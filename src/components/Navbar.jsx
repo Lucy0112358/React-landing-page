@@ -1,6 +1,7 @@
 import React from "react";
 import Logotype from "../assets/Logotype.png";
 import Path from "../assets/Path.png";
+import Arrow from "../assets/Arrow.png";
 
 function Navbar() {
   window.addEventListener("scroll", () => {
@@ -16,35 +17,62 @@ function Navbar() {
 
   return (
     <>
-      <div>       
+      <div>
         <nav id="menu">
           <img src={Logotype} />
-          <div className="container">
-          <div>
-            Demos
-            <img src={Path} />
-          </div>
-          <div>
-          Post
-            <img src={Path} />
-          </div>{" "}
-          <div>
-          Features
-            <img src={Path} />
-          </div>{" "}
-          <div>
-          Categories
-            <img src={Path} />
-          </div>{" "}
-          <div>
-          Shop
-            <img src={Path} />
-          </div>{" "}
-          <div>
-            Demos
-           
-          </div>
-          </div>
+          <ul className="container">
+            <li>
+              Demos
+              <img src={Path} />
+            </li>
+            <li>
+              Post
+              <img src={Path} />
+            </li>{" "}
+            <li className="features">
+              Features
+              <img src={Path} />
+              <ul className="submenu">
+                <li className="layout">
+                  <span className="grid-container">
+                    <span>Post Header</span>
+                    <img src={Arrow} />
+                  </span>
+                  
+                    <div className="second-submenu">Share Buttons</div>
+                 
+                </li>
+                <li className="">
+                  <span className="grid-container">
+                    <span>Post Layout</span>
+                    <img src={Arrow} />
+                  </span>
+                </li>
+
+                <li>
+                  <span className="grid-container">
+                    <span> Gallery Post</span>
+                    <img src={Arrow} />
+                  </span>
+                </li>
+                <li>
+                  <span className="grid-container">
+                    <span> Video Post</span>
+                    <img src={Arrow} />
+                  </span>
+                </li>
+              </ul>
+            </li>{" "}
+            <li>
+              Categories
+              <img src={Path} />
+            </li>{" "}
+            <li>
+              Shop
+              <img src={Path} />
+            </li>{" "}
+            <li>Demos</li>
+          </ul>
         </nav>
       </div>
     </>
