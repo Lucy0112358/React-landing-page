@@ -1,5 +1,3 @@
-import logo from "./logo.svg";
-import "./App.css";
 import "./styles/navbar.scss";
 import CardContainer from "./components/CardContainer";
 import Navbar from "./components/Navbar";

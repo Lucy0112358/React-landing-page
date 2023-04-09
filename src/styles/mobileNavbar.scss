@@ -1,22 +1,28 @@
 @media screen and (max-width: 480px) {
-.container{
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  display: none;
-}
-.layout:hover .second-submenu{
-  display: none !important;
-}
-.second-submenu{
-  display: none;
-}
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    display: none;
+  }
+  #menu {
+    width: 80%;
+  }
+  .layout:hover .second-submenu {
+    display: none !important;
+  }
+  .second-submenu {
+    display: none;
+  }
 }
 @media screen and (min-width: 481px) {
-.menu{
-  display: none;
-}
-.heading{
-  justify-content: center;
-}
+  .menu {
+    display: none;
   }
+  .heading {
+    justify-content: center;
+  }
+  .card-item {
+    height: 511.8px;
+  }
+}

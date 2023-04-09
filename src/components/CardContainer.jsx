@@ -4,16 +4,9 @@ import Card from "./Card";
 
 function CardContainer() {
   return (
-  
-      <div className="main-container">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-      </div>
-   
+    <div className="main-container">
+      <Card />
+    </div>
   );
 }
 

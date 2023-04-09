@@ -7,7 +7,9 @@ import Arrow from "../assets/Arrow.png";
 import Menu from "../assets/Menu.png";
 
 function Navbar() {
-  const [visible, setVisible] = useState("flex")
+  const [visible, setVisible] = useState(
+    window.innerWidth < 480 ? "none" : "flex"
+  );
   window.addEventListener("scroll", () => {
     const scrolled = window.scrollY;
     if (scrolled > 200) {
@@ -19,18 +21,34 @@ function Navbar() {
     }
   });
   const showMenu = () => {
-    visible === "flex" ? setVisible("none") : setVisible("flex")
-    console.log(visible)
-}
+    visible === "flex" ? setVisible("none") : setVisible("flex");
+  };
+  window.addEventListener("click", (event) => {
+    let menu = document.getElementById("menu");
+    let openMenu = document.getElementById("open-menu");
+    if (
+      event.target !== menu &&
+      window.innerWidth < 481 &&
+      !menu.contains(event.target)
+    ) {
+      showMenu();
+    }
+  });
+
   return (
     <>
       <div>
         <nav id="menu">
           <span className="heading">
-            <img src={Menu} className="menu" onClick={showMenu} />
+            <img
+              src={Menu}
+              className="menu"
+              id="open-menu"
+              onClick={showMenu}
+            />
             <img src={Logotype} className="logo" />
           </span>
-          <ul className="container" style={{display: visible}}>
+          <ul className="container" style={{ display: visible }}>
             <li>
               Demos
               <img src={Path} />
